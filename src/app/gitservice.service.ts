@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../environments/environment';
 import { User } from './user';
+import { resolve, reject } from 'q';
 
 
 @Injectable({
@@ -48,9 +49,22 @@ export class GitserviceService {
 //      })
 //      return promise
 //    }
-constructor () { }
+constructor (private http:HttpClient) { }
 searchGit(searchTerm:string){
-  console.log(searchTerm);
+  let urlUser = "https://api.github.com/users/Nyagah-Tech?access_token="+environment.accessToken;
+  urlUser+="&q"+searchTerm;
+  let promise = new Promise((resolve,reject)=>{
+    this.http.get(urlUser).toPromise().then(
+      (result)=>{
+        console.log(result);
+        resolve()
+      },
+      (error)=>{
+        console.log(error)
+        reject()
+      }
+    )
+  })
+  return promise
 }
-
 }
