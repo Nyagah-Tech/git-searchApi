@@ -11,10 +11,8 @@ import { GitserviceService } from '../gitservice.service';
   styleUrls: ['./gitland.component.css']
 })
 export class GitlandComponent implements OnInit {
-user:User;
-userService:GitserviceService;
   constructor(private userServ:GitserviceService) { 
-    this.userService=userServ
+
   }
 
   ngOnInit() {
@@ -24,6 +22,6 @@ userService:GitserviceService;
 
  }
 searchGit(searchTerm){
-  console.log(searchTerm)
+  this.userServ.searchGit(searchTerm)
 }
 }
