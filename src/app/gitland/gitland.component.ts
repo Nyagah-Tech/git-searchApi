@@ -11,6 +11,8 @@ import { GitserviceService } from '../gitservice.service';
   styleUrls: ['./gitland.component.css']
 })
 export class GitlandComponent implements OnInit {
+  user:User[]=[];
+final=[];
   constructor(private userServ:GitserviceService) { 
 
   }
@@ -22,6 +24,13 @@ export class GitlandComponent implements OnInit {
 
  }
 searchGit(searchTerm){
-  this.userServ.searchGit(searchTerm)
+  this.userServ.searchGit(searchTerm).then(
+    ()=>{
+      this.user = this.userServ.user;
+    },
+    (error)=>{
+      console.log(error)
+    }
+  )
 }
 }

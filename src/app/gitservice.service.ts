@@ -49,6 +49,9 @@ export class GitserviceService {
 //      })
 //      return promise
 //    }
+user:User[]=[];
+final=[]
+
 constructor (private http:HttpClient) { }
 searchGit(searchTerm:string){
   let urlUser = "https://api.github.com/users/Nyagah-Tech?access_token="+environment.accessToken;
@@ -56,7 +59,16 @@ searchGit(searchTerm:string){
   let promise = new Promise((resolve,reject)=>{
     this.http.get(urlUser).toPromise().then(
       (result)=>{
-        console.log(result);
+        this.user = [];
+           this.user.name = result.login
+           this.user.avatarUrl =result.avatar_url
+           this.user.bio =result.bio
+           this.user.email = result.email
+           this.user.location = result.location
+           this.user.html_url = result.html_url
+           let final = this.user;
+       
+        console.log(final.name);
         resolve()
       },
       (error)=>{
