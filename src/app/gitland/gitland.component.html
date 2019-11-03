@@ -2,12 +2,30 @@
 <app-search-form (emitSearch)="searchGit($event)"></app-search-form>
 
 <div class="row">
-    <div class="col-md-4" *ngIf="Users">
+    <div class="col-md-4" >
         <div class="card">
-            <div class="card-body" *ngFor="let User of Users">
-                {{User.login}}
+            <div class="card-header">
+                    {{Users.login}}
+            </div>
+            <div class="card-body"></div>
+              <img src="{{Users.avatar_url}}" alt="profile pic" height="200px" width="250px">
+              <p><b>{{Users.bio}}</b></p>
+              <p>
+                <i>Email :::     </i>
+                <b>{{Users.email}}</b>
+              </p>
+              <p>
+                <i>Located at :::  </i>
+                <b>{{Users.location}}</b>
+              </p>
+              <p>
+                  <i>Git link :::  </i>
+                  <b>{{Users.html_url}}</b>
+              </p>
+
             </div>
         </div>
+        <div class="col-md-8"></div>
     </div>
-    <div class="col-md-8"></div>
-</div>
+   
+
