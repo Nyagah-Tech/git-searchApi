@@ -1,19 +1,29 @@
-<div class="container">
-    <p>The <b>Git-Projo</b> is an application that gives users a platform
+<div class="container" id="intro">
+    <p >The <b>Git-Projo</b> is an application that gives users a platform
          where they can search for thier git usernames and find thier repositories displayed or even they can search a project and they will be displayed with 
          names of peploe they have done a project with the above name...
         </p>
+        <p>For any querry or assistance reach to us by filling the form below</p>
         <div class="card">
             <div class="card-body">
                 <form>
-                    <label for="name">Your name</label>
-                    <input type="text" name="name" placeholder="Your name..">
-                    <label for="email">Email</label>
-                    <input type="email" placeholder="example@gmail.com">
-                    <textarea name="text" id="quote" cols="30" rows="10" placeholder="your text goes here"></textarea>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="name">Your name</label><br>
+                            <input type="text" name="name" id="name" placeholder="Your name..">
+                        </div>
+                        <div clas="col-md-6">
+                            <label for="email">Email</label><br>
+                            <input type="email" id="email" placeholder="example@gmail.com"><br>
+                        </div>
+                    </div><br>
+                    <textarea name="text" id="quote" cols="45" rows="5" placeholder="your text goes here" ></textarea>
                     <button type="submit" (click)="submit()">Submit</button>
                     
                 </form>
             </div>
         </div>
 </div>
+<footer>
+   <p id="foot"> &copy; All rights reserved for Nyagah-Tech</p>
+</footer>
