@@ -27,8 +27,8 @@ export class GitserviceService {
 //        let urlUser = `https://api.github.com/users/Nyagah-Tech?access_token=${environment.accessToken}`
 //        this.http.get<userResponse>(urlUser).toPromise().then(
 //          Response =>{
-//            this.user.name = Response.login
-//            this.user.avatarUrl = Response.avatar_url
+//            this.user.login = Response.login
+//            this.user.avatar_url = Response.avatar_url
 //            this.user.bio = Response.bio
 //            this.user.email = Response.email
 //            this.user.location = Response.location
@@ -37,8 +37,8 @@ export class GitserviceService {
 //            resolve()
 //          },
 //          error=>{
-//           this.user.name = "Invalid username"
-//           this.user.avatarUrl = ""
+//           this.user.login= "Invalid username"
+//           this.user.avatar_url = ""
 //           this.user.bio = ""
 //           this.user.email ="" 
 //           this.user.location =""
@@ -47,28 +47,36 @@ export class GitserviceService {
 //           reject(error)
 //          })
 //      })
+//      console.log(this.user.login)
 //      return promise
+     
 //    }
-user:User[]=[];
+//   }
+
+
+
+
+Users:User[];
 final=[]
 
 constructor (private http:HttpClient) { }
-searchGit(searchTerm:string){
+searchGits(searchTerm:string){
   let urlUser = "https://api.github.com/users/Nyagah-Tech?access_token="+environment.accessToken;
   urlUser+="&q"+searchTerm;
   let promise = new Promise((resolve,reject)=>{
     this.http.get(urlUser).toPromise().then(
       (result)=>{
-        this.user = [];
-           this.user.name = result.login
-           this.user.avatarUrl =result.avatar_url
-           this.user.bio =result.bio
-           this.user.email = result.email
-           this.user.location = result.location
-           this.user.html_url = result.html_url
-           let final = this.user;
+        this.Users= [];
+           this.Users.login = result.login,
+           this.Users.avatar_url =result.avatar_url
+           this.Users.bio =result.bio
+           this.Users.email = result.email
+           this.Users.location = result.location
+           this.Users.html_url = result.html_url
+           let final = this.Users;
        
-        console.log(final.name);
+        console.log(final.login);
+        
         resolve()
       },
       (error)=>{

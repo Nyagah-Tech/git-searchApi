@@ -1,7 +1,7 @@
 export class User {
 constructor(
-    public name:string,
-    public avatarUrl:any,
+    public login:string,
+    public avatar_url:any,
     public bio:string,
     public email:any,
     public location:any,

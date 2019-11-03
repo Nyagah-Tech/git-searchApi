@@ -14,7 +14,7 @@ searchTerm:string;
   constructor() { }
 search(event:any){
   this.username = event.target.value
-  this.emitSearch.emit(this.searchTerm)
+  this.emitSearch.emit(this.username)
   console.log(this.username)
 }
   ngOnInit() {

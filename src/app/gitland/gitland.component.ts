@@ -11,22 +11,24 @@ import { GitserviceService } from '../gitservice.service';
   styleUrls: ['./gitland.component.css']
 })
 export class GitlandComponent implements OnInit {
-  user:User[]=[];
+  Users:User[];
 final=[];
-  constructor(private userServ:GitserviceService) { 
+  constructor(public userHttpService:GitserviceService) { 
 
   }
 
   ngOnInit() {
+    this.searchGit("Nyagah-Tech")
     // this.userServ.userFuction()
     // this.user = this.userServ.user
     // console.log(this.user)
 
  }
 searchGit(searchTerm){
-  this.userServ.searchGit(searchTerm).then(
+  this.userHttpService.searchGits(searchTerm).then(
     ()=>{
-      this.user = this.userServ.user;
+      this.Users = this.userHttpService.Users;
+      console.log(this.Users.login)
     },
     (error)=>{
       console.log(error)

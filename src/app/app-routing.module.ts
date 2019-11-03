@@ -2,11 +2,16 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { GitlandComponent } from './gitland/gitland.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './about/about.component';
 
 
 const routes: Routes = [
-  {"path":"home","component":GitlandComponent},
   {"pathMatch":"full","redirectTo":"home","path":""},
+  {"path":"home","component":GitlandComponent},
+  {"path":"contact","component":ContactComponent},
+  {"path":"about","component":AboutComponent},
+  
   {"path":"**","component":NotFoundComponent},
 ];
 

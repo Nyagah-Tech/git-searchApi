@@ -10,6 +10,8 @@ import { GitlandComponent } from './gitland/gitland.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SearchFormComponent } from './search-form/search-form.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { SearchFormComponent } from './search-form/search-form.component';
     GitlandComponent,
     NavbarComponent,
     NotFoundComponent,
-    SearchFormComponent
+    SearchFormComponent,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
