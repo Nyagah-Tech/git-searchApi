@@ -22,3 +22,13 @@ footer{
     margin-top: 40px;
     
 }
+.card{
+   margin-top: 20px;
+   background-color: silver;
+}
+input{
+    background-color: transparent;
+}
+textarea{
+    background-color: transparent;
+}

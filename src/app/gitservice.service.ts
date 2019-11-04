@@ -66,6 +66,9 @@ searchGits(searchTerm:string){
     avatar_url:any,
     bio:string,
     email:any,
+    followers:any,
+    following:any,
+    public_repos,
     location:any,
    html_url:any
   }

@@ -1,0 +1,17 @@
+.reposi{
+    text-align: center;
+    margin-top: 20px ;
+}
+#fin{
+    font-size: 33px;
+}
+.row{
+    margin-left: 10px;
+}
+.col-md-4{
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.card{
+    background-color: silver;
+}

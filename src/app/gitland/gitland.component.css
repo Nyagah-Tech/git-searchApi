@@ -1,10 +1,11 @@
-.parent{
-    margin-left: 20px;
-    margin-top: 20px;
+#parent{
+    padding-left: 20px;
+    
    /* background-image: url("https://wallpapertag.com/wallpaper/full/e/f/5/156698-widescreen-white-gradient-background-1920x1080-for-windows.jpg") */
 }
 .card{
     font-family: 'Arvo', serif;
+    background-color: grey;
 }
 .card-body{
     text-align: center;
@@ -16,4 +17,11 @@
     font-weight: 700;
     margin-left:400px;
 
+}
+#usr{
+    background-color:black;
+    color:white;
+}
+.col-md-3{
+    background-color: black;
 }

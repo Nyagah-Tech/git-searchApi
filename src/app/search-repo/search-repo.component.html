@@ -1,15 +1,28 @@
-
-<app-form-repo (emitSearchrepo)="findRepo($event)"></app-form-repo>
-<div *ngIf='Repos' class="col-md-8">
-    <h2 id="repo">Your Repositories</h2>
-    <div class="row">
-        <div class="col-sm-4" *ngFor='let repo of Repos'>
-            <div class="card">
-                <div class="card-header">
-                    <h5>Repo Name: {{repo.name}}</h5>
+<div class="reposi">
+    <p id="fin">Search a  project-name here to find people who have done the same project in Github.</p>
+    <app-form-repo (emitSearchrepo)="findRepo($event)"></app-form-repo><br>
+    <h2 id="repo">Repository results</h2><br><br>
+        <div *ngIf='Repos'>
+            <div class="row">
+                <div class="col-md-3" *ngFor='let repo of Repos'>
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>Repo Name: {{repo.name}}</h5>
+                        </div>
+                        <div class="card-body">
+                            <p> {{repo.description}} </p>
+                            <br>
+                            <p>Updated at {{repo.updated_at | date}} </p>
+                            <p>Created at {{repo.created_at | date}} </p>
+    
+                        </div>
+                        <div class="card-footer">
+                            <a href=" {{repo.html_url}} "> {{repo.html_url}}  </a> 
+                        </div>
+                    </div>
                 </div>
-                
             </div>
-        </div>
+        
     </div>
+    
 </div>
