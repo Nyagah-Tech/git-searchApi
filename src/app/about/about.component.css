@@ -1,12 +1,14 @@
 #name{
-    margin-left: 0;
+    margin-left: 0px;
 }
 #email{
-    margin-left: 0;
+    margin-left: 10px;
 }
 #intro{
-    font-family: 'Bowlby One SC', cursive;
-    font-size: 35px;
+    font-family: 'Prata', serif;
+    font-size: 30px;
+    color:black;
+    
 }
 footer{
     background-color: black;
@@ -17,4 +19,5 @@ footer{
 }
 .foot{
     margin-top: 30px;
+    
 }

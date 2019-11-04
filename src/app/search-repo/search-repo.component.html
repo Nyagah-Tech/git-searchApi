@@ -1,0 +1,15 @@
+
+<app-form-repo (emitSearchrepo)="findRepo($event)"></app-form-repo>
+<div *ngIf='Repos' class="col-md-8">
+    <h2 id="repo">Your Repositories</h2>
+    <div class="row">
+        <div class="col-sm-4" *ngFor='let repo of Repos'>
+            <div class="card">
+                <div class="card-header">
+                    <h5>Repo Name: {{repo.name}}</h5>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>

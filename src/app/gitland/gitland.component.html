@@ -1,31 +1,42 @@
-
-<app-search-form (emitSearch)="searchGit($event)"></app-search-form>
-
-<div class="row">
-    <div class="col-md-4" >
-        <div class="card">
-            <div class="card-header">
-                    {{Users.login}}
+<div class="parent">
+    <app-search-form (emitSearch)="searchGit($event)"></app-search-form>
+<br>
+    <div  class="row">
+        <div class="col-md-3" >
+            <div class="card">
+                <div class="card-header">
+                        {{Users.login}}
+                </div>
+                <div class="card-body"></div>
+                    <img src="{{Users.avatar_url}}" alt="profile pic" height="200px" width="250px">
+                    <p><b>{{Users.bio}}</b></p>
+                    <p>
+                    <i>Email :::     </i>
+                    <b>{{Users.email}}</b>
+                    </p>
+                    <p>
+                    <i>Located at :::  </i>
+                    <b>{{Users.location}}</b>
+                    </p>
+                    
+                        
+                </div>
+                <div class="card-footer">
+                    <a href=" {{Users.html_url}} "><b>{{Users.html_url}}</b></a>
+                </div>
             </div>
-            <div class="card-body"></div>
-              <img src="{{Users.avatar_url}}" alt="profile pic" height="200px" width="250px">
-              <p><b>{{Users.bio}}</b></p>
-              <p>
-                <i>Email :::     </i>
-                <b>{{Users.email}}</b>
-              </p>
-              <p>
-                <i>Located at :::  </i>
-                <b>{{Users.location}}</b>
-              </p>
-              <p>
-                  <i>Git link :::  </i>
-                  <b>{{Users.html_url}}</b>
-              </p>
-
+            <div *ngIf='Repos' class="col-md-8">
+                <h2 id="repo">Your Repositories</h2>
+                <div class="row">
+                    <div class="col-sm-4" *ngFor='let repo of Repos'>
+                        <div class="card">
+                            <h5>Repo Name: {{repo.name}}</h5>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-md-8"></div>
-    </div>
-   
-
+        
+        
+        
+</div>

@@ -3,48 +3,54 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from '../environments/environment';
 import { User } from './user';
 import { Repo } from './repo';
+import { observable, Observable } from 'rxjs';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class RepoServiceService {
-  repo:Repo;
-  constructor(private http:HttpClient) {
-    this.repo = new Repo("","","","","","","");
-   };
-   repofunction(){
-     interface repoResponse{
-       full_name:string;
-       html_url:string;
-       description:string;
-       homepage:any;
-       language:string;
-       create_at:any;
-     }
-     let promise = new Promise((resolve,reject)=>{
-       let urlRepo = `https://api.github.com/users/Nyagah-Tech/repos?access_token=${environment.accessToken}`
-       this.http.get<repoResponse>(urlRepo).toPromise().then(Response=>{
-         this.repo.fullname = Response.full_name
-         this.repo.html_url = Response.html_url
-         this.repo.description = Response.description
-         this.repo.hompage = Response.homepage
-         this.repo.language = Response.language
-         this.repo.created_at = Response.create_at
-         resolve()
-       },
-       error=>{
-        this.repo.fullname ="invalid option"
-        this.repo.html_url =""
-        this.repo.description = "invalid repository name or the repository name doesnt exist"
-        this.repo.hompage = ""
-        this.repo.language =""
-        this.repo.created_at="" 
+url = "https://api.github.com/users/";
+token= "?access_token=fde297391e1f20011a46234d1aba962ba370036f";
+Repos:Repo[]=[];
 
-        reject(error)
-       })
-     })
 
-     return promise
-   }
+constructor (private http:HttpClient) { }
+findRepo(repoTerm:string): Observable<any>{
+return this.http.get(this.url + repoTerm + "/repos" + this.token )
+};
+
+
+
+// searchRepos(repoTerm:string){
+//   interface repoInterface{
+//     name:string,
+//     description:string,
+//     html_url:any,
+//     created_at:Date,
+//   }
+
+//   let urlUser = "https://api.github.com/users/"+ repoTerm +"/repos"+"?access_token="+environment.accessToken;
+
+//   let promise = new Promise((resolve,reject)=>{
+//     this.http.get<repoInterface[]>(urlUser).toPromise().then(
+//       (results)=>{
+
+//         this.Repos= [];
+//         for (let i=0; i<results.length;i++){
+//           var repo = new Repo(results[i].name,results[i].description,results[i].html_url,results[i].created_at)
+//           this.Repos.push(repo);
+//         }
+//         console.log(this.Repos);
+//         resolve()
+//       },
+//       (error)=>{
+//         alert('this is an error')
+//         reject()
+//       }
+//     )
+//   })
+//   return promise
+// }
 }
+

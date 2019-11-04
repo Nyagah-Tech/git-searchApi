@@ -11,6 +11,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SearchFormComponent } from './search-form/search-form.component';
 import { AboutComponent } from './about/about.component';
+import { SearchRepoComponent } from './search-repo/search-repo.component';
+import { FormRepoComponent } from './form-repo/form-repo.component';
 // import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
@@ -21,6 +23,8 @@ import { AboutComponent } from './about/about.component';
     NotFoundComponent,
     SearchFormComponent,
     AboutComponent,
+    SearchRepoComponent,
+    FormRepoComponent,
     // ContactComponent
   ],
   imports: [
