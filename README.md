@@ -1,5 +1,5 @@
 # The Git_search application
-this is an application that gives a user the ability to search for usernames in github as well as the repositories in github using the git api. 
+this is an application that gives a user the ability to search for usernames in github as well as the repositories in github using the git api. you can checkout the application at https://nyagah-tech.github.io/git-searchApi/
 ## Description
 The Git_search is an application that gives users a platform to interact with the git api.We hope by creating this web-application 
 you will enjoy its services.
