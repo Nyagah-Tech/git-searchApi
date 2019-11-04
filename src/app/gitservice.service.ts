@@ -72,7 +72,7 @@ searchGits(searchTerm:string){
     location:any,
    html_url:any
   }
-  let urlUser = "https://api.github.com/users/"+searchTerm+"?access_token="+environment.accessToken;
+  let urlUser = "https://api.github.com/users/"+searchTerm+"?access_token=fde297391e1f20011a46234d1aba962ba370036f";
   
   let promise = new Promise((resolve,reject)=>{
     this.http.get<userInterface>(urlUser).toPromise().then(
