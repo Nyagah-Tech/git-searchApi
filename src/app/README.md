@@ -14,7 +14,7 @@ For this application to learn well ensure you have an updated browser,
 ## Technologies Used
 The language used to develop this application is the HTML,CSS,BOOTSTRAP and Angular.. 
 ## Support and contact details
- kindly reach out our support team @dannyagah13@gmail.com for any technical problem or any idea we can implement to ensure you get the result you need. You can also through
+ kindly reach out our support team @dannyagah13@gmail.com for any technical problem or any idea we can implement to ensure you get the result you need. You can also through the about
 ## BDD(Behaviour Driven Development)
 The user is required to input a username that is registered on ghithub.
 the api will generate all the repositories associated with the particular username.
