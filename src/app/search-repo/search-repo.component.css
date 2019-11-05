@@ -14,4 +14,15 @@
 }
 .card{
     background-color: silver;
+    height:470px;
+    margin-bottom: 20px;
+}
+#card{
+    transition: all .6s ease-in-out;
+}
+
+#card:hover{
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    tranform: scale(1.02);
 }

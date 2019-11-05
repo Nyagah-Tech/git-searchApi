@@ -43,11 +43,11 @@
                
             </div>
             
-            <div *ngIf='Repos' class="col-md-8">
+            <div *ngIf='Repos' class="col-md-8 grid-container ">
                 <h2 id="repo">Your Repositories</h2>
                 <div class="row">
                     <div class="col-sm-4" *ngFor='let repo of Repos'>
-                        <div class="card">
+                        <div class="card" id="card">
                             <div class="card-header">
                                 <h5>Repo Name: {{repo.name}}</h5> 
                             </div>

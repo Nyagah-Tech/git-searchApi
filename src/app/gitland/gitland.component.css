@@ -6,6 +6,9 @@
 .card{
     font-family: 'Arvo', serif;
     background-color: grey;
+    height:470px;
+    margin-bottom: 20px;
+
 }
 .card-body{
     text-align: center;
@@ -28,3 +31,15 @@
 .col-md-8{
     margin-top: 40px;
 }
+#card{
+    transition: all .6s ease-in-out;
+}
+
+#card:hover{
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    tranform: scale(1.02);
+    color:white;
+}
+
+
