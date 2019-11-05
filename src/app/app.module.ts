@@ -13,6 +13,7 @@ import { SearchFormComponent } from './search-form/search-form.component';
 import { AboutComponent } from './about/about.component';
 import { SearchRepoComponent } from './search-repo/search-repo.component';
 import { FormRepoComponent } from './form-repo/form-repo.component';
+import { HighlightDirective } from './highlight.directive';
 // import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
@@ -25,6 +26,7 @@ import { FormRepoComponent } from './form-repo/form-repo.component';
     AboutComponent,
     SearchRepoComponent,
     FormRepoComponent,
+    HighlightDirective,
     // ContactComponent
   ],
   imports: [
