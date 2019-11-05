@@ -53,7 +53,7 @@
                             </div>
                             <div class="card-body">
                                 <p> {{repo.description}} </p><br>
-                                <p> {{repo.created_at}} </p>
+                                <p>created at:::  {{repo.created_at | date}} </p>
                             </div>
                             <div class="card-footer">
                                 <a href=" {{repo.html_url}} "> {{repo.html_url}} </a>
